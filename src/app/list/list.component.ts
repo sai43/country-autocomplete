@@ -35,6 +35,9 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.service.currentCountryName.subscribe(name => {
+        
+        
+        
       // complete this function which searches the countries using regex and adds them to searchCountriesList
     });
 
