@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { DataService } from '../data.service';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/switchMap';
+
 @Component({
   selector: 'search-component',
   templateUrl: './search.component.html',
@@ -19,18 +23,11 @@ export class SearchComponent implements OnInit {
       'searchCountry': [null]
     });
 
-    this.searchCountry.valueChanges.subscribe( result => console.log(result));
-
-  }
-
-  // ngOnInit() {
-  //   this.queryField.valueChanges
-  //   .subscribe(queryField =>this._searchService.search(queryField)
-  //   .subscribe(response => this.results = this.response.json().artists.items);
-  //  }
-
-  PerformSearch(event) {
-    console.log(`country name: ${event.target.value}`);
+    this.searchCountry.valueChanges
+    .debounceTime(400)
+    .distinctUntilChanged()
+    .subscribe( result => this.service.changeCountryName(result));
+    
   }
 
 }

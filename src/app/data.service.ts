@@ -10,8 +10,8 @@ export class DataService {
   constructor() { }
 
   changeCountryName(country: string) {
-    
+    this.countryNameSource.next(country);
   }
 
-  
+
 }

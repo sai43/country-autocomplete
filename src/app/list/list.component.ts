@@ -35,7 +35,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.service.currentCountryName.subscribe(name => {
-      
+      console.log(name);
     });
 
   }
