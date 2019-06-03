@@ -43,6 +43,8 @@ export class ListComponent implements OnInit {
   getCountries(name) {
     if(name.length){
       this.searchCountriesList = this.countries.filter(country => country.toLowerCase().startsWith(name.toLowerCase()));
-    } 
+    } else {
+      this.searchCountriesList = [];
+    }
   }
 }
