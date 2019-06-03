@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { DataService } from '../data.service';
 @Component({
   selector: 'search-component',
@@ -7,18 +7,30 @@ import { DataService } from '../data.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  searchCountry: FormControl = new FormControl();
   searchForm: FormGroup;
+  results: any[] = [];
+
   constructor(private fb: FormBuilder, public service: DataService) { }
 
   ngOnInit() {
 
-    // add corresponding validators
     this.searchForm = this.fb.group({
       'searchCountry': [null]
     });
 
-    // write a function that calls changeCountryName upon value change in the form
+    this.searchCountry.valueChanges.subscribe( result => console.log(result));
+
+  }
+
+  // ngOnInit() {
+  //   this.queryField.valueChanges
+  //   .subscribe(queryField =>this._searchService.search(queryField)
+  //   .subscribe(response => this.results = this.response.json().artists.items);
+  //  }
+
+  PerformSearch(event) {
+    console.log(`country name: ${event.target.value}`);
   }
 
 }
