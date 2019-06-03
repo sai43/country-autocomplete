@@ -35,9 +35,14 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.service.currentCountryName.subscribe(name => {
-      console.log(name);
+      this.searchString = name;
+      this.getCountries(name)
     });
-
   }
 
+  getCountries(name) {
+    if(name.length){
+      this.searchCountriesList = this.countries.filter(country => country.toLowerCase().startsWith(name.toLowerCase()));
+    } 
+  }
 }
