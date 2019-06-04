@@ -34,6 +34,7 @@ export class ListComponent implements OnInit {
   constructor(private service: DataService) { }
 
   ngOnInit() {
+    this.searchCountriesList = this.countries;
     this.service.currentCountryName.subscribe(name => {
       this.searchString = name;
       this.getCountries(name)

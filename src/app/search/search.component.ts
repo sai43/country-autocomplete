@@ -11,20 +11,19 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  searchCountry: FormControl = new FormControl();
   searchForm: FormGroup;
+  searchCountry: FormControl;
   results: any[] = [];
 
   constructor(private fb: FormBuilder, public service: DataService) { }
 
   ngOnInit() {
-
     this.searchForm = this.fb.group({
-      'searchCountry': [null]
+      searchCountry: [null, Validators.required]
     });
 
-    this.searchCountry.valueChanges
-    .debounceTime(400)
+    this.searchForm.get('searchCountry').valueChanges
+    .debounceTime(300)
     .distinctUntilChanged()
     .subscribe( result => this.service.changeCountryName(result));
     

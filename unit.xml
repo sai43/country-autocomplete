@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 74.0.3729 (Mac OS X 10.14.5)" package="unit" timestamp="2019-06-04T04:32:39" id="0" hostname="Sai-Ch.local" tests="5" errors="0" failures="2" time="0.624">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/74.0.3729.169 Safari/537.36"/>
+  </properties>
+  <testcase name="DataService should use an observable to add values" time="0.039" classname="unit.DataService"/>
+  <testcase name="ListComponent should enlist all the countries" time="0.152" classname="unit.ListComponent">
+    <failure type="">Expected [  ] to equal [ 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia &amp; Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Cape Verde', 'Cayman Islands', 'Chad', 'Chile', 'China', 'Colombia', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote D Ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Estonia', 'Ethiopia', 'Falkland Islands', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia', 'French West Indies', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait', ... ].
+    at Object.&lt;anonymous&gt; Users/sai/Saich/angular--country-filter-38j4jeljelr/src/app/list/list.component.spec.ts:22:38)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke Users/sai/Saich/angular--country-filter-38j4jeljelr/~/zone.js/dist/zone.js:391:1)
+    at ProxyZoneSpec.webpackJsonp.../../../../zone.js/dist/proxy.js.ProxyZoneSpec.onInvoke Users/sai/Saich/angular--country-filter-38j4jeljelr/~/zone.js/dist/proxy.js:129:1)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke Users/sai/Saich/angular--country-filter-38j4jeljelr/~/zone.js/dist/zone.js:390:1)
+</failure>
+  </testcase>
+  <testcase name="ListComponent should filter the countries" time="0.022" classname="unit.ListComponent"/>
+  <testcase name="SearchComponent should not be valid if search box is empty" time="0.073" classname="unit.SearchComponent"/>
+  <testcase name="SearchComponent should trigger the changeCountryName routine" time="0.338" classname="unit.SearchComponent">
+    <failure type="">Expected spy changeCountryName to have been called.
+    at Object.&lt;anonymous&gt; Users/sai/Saich/angular--country-filter-38j4jeljelr/src/app/search/search.component.spec.ts:32:46)
+    at TestBed.webpackJsonp.../../../core/@angular/core/testing.es5.js.TestBed.execute Users/sai/Saich/angular--country-filter-38j4jeljelr/~/@angular/core/@angular/core/testing.es5.js:826:1)
+    at Object.&lt;anonymous&gt; Users/sai/Saich/angular--country-filter-38j4jeljelr/~/@angular/core/@angular/core/testing.es5.js:956:29)
+    at ZoneDelegate.webpackJsonp.../../../../zone.js/dist/zone.js.ZoneDelegate.invoke Users/sai/Saich/angular--country-filter-38j4jeljelr/~/zone.js/dist/zone.js:391:1)
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
